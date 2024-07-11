@@ -5,13 +5,14 @@ export const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passtype, setPasstype] = useState(false);
-  const [error, setError] = useState("");
 
   const showHddle = () => {
     setPasstype(!passtype);
   };
 
-  const loginSubmit = async () => {};
+  const loginSubmit = async (event) => {
+    event.preventDefault();
+  };
   return (
     <div className="bg-slate-200 h-[100vh] flex items-center justify-center">
       <div className="flex flex-col items-center bg-white max-w-[400px] w-full px-10 py-5  mx-auto rounded">
